@@ -9,7 +9,7 @@ import {
   getNextCellState,
   validateDimensions,
 } from "../utils/gridUtils";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export type GridDimensions = {
   rows: number;
@@ -28,7 +28,6 @@ export function useGridLogic(rows = DEFAULT_ROWS, columns = DEFAULT_COLUMNS) {
     DEFAULT_SIMULATION_SPEED
   );
   const [isRunning, setIsRunning] = useState(false);
-  const runningRef = useRef(isRunning);
 
   const resetGame = useCallback(() => {
     setIsRunning(false);
@@ -118,10 +117,6 @@ export function useGridLogic(rows = DEFAULT_ROWS, columns = DEFAULT_COLUMNS) {
       document.body.removeChild(link);
     }
   };
-
-  useEffect(() => {
-    runningRef.current = isRunning;
-  }, [isRunning]);
 
   useEffect(() => {
     let intervalId: number;
