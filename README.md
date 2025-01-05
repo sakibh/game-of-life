@@ -32,6 +32,7 @@ The logic to adhere to these rules can be found in the `countNeighbors` and the 
 
 - Interactive grid to set initial cell states
 - Start, pause, and reset game controls
+- Adjust simulation speed
 - Adjustable grid size
 - Import and export grid states
 - Responsive design for various screen sizes with light and dark mode
