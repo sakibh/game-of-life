@@ -6,7 +6,8 @@ This project is a React implementation of [Conway's Game of Life](https://en.wik
 
 ## 🎮 Live Demo
 
-Video:
+Video: https://github.com/user-attachments/assets/75bba6ac-0769-4e79-8456-4bc35e0d6a18
+
 
 ## Game Rules
 
@@ -65,3 +66,39 @@ npm run dev
 ```
 
 4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Import Initial Grid State
+You can import an initial grid state to test your simulation. The input file needs to be a `JSON` file with a nested array of values (2D array). The values should be `0` (dead) or `1` (alive).
+
+Example:
+
+`grid_data.json`
+
+```
+[
+  [
+    0,
+    0,
+    0,
+    1
+  ],
+  [
+    0,
+    1,
+    1,
+    0
+  ],
+  [
+    0,
+    0,
+    0,
+    0
+  ],
+  [
+    1,
+    0,
+    0,
+    0
+  ]
+]
+```
